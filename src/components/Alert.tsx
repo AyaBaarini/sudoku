@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 
 interface Props {
   message: string;

@@ -1,3 +1,5 @@
+
+@import"../node_modules/bootstrap/dist/css/bootstrap.css";
 html, body {
   min-height: 100%;
   margin: 0;
@@ -19,7 +21,7 @@ html, body {
   letter-spacing: 2px;
   font-family: 'Arial', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #395886; /* Header background color */
+  background-color: #395886;
   z-index: 2;
   box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
@@ -110,25 +112,25 @@ button:hover {
 
 /* Different colors for different buttons */
 .hint-btn {
-  background-color: #b1c9ef; /* Easy button color */
+  background-color: #b1c9ef; 
 color:white;
 border-radius: 5px;
 }
 
 .check-sol-btn {
-  background-color: #8aaee0; /* Medium button color */
+  background-color: #8aaee0; 
 color:white;
 border-radius: 5px;
 }
 
 .solve-btn {
-  background-color: #628ecb; /* Hard button color */
+  background-color: #628ecb; 
   color:white;
   border-radius: 5px;
 }
 
 .custom-sudoku-btn {
-  background-color: #395886; /* Custom button same as header */
+  background-color: #395886; 
   color: white;
   border: none;
 }
