@@ -1,0 +1,184 @@
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.App {
+  /* background-color:  #dae5ff; */
+  background-color:  white;
+
+  color:white;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 0.5%;
+  letter-spacing: 2px;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #395886; /* Header background color */
+  z-index: 2;
+  box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  gap: 0px;
+  width: 360px;
+  height: 360px;
+  margin: auto;
+}
+
+.roww {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 0px;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid  #395886;
+  background-color: #ffffff;
+  color:  #395886;
+}
+
+.cell.cellInvalid {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.cell:focus {
+  outline: 2px solid  #395886;
+}
+
+.roww .cell:first-child {
+  border-left:  #395886 3px solid;
+}
+
+.roww:first-child {
+  border-top: #395886 3px solid;
+}
+
+.roww:nth-child(3n) {
+  border-bottom: 3px solid  #395886;
+}
+
+.cell:nth-child(3n) {
+  border-right: 3px solid  #395886;
+}
+
+.board .cell.hinted-cell {
+  background-color: #95bb72;
+  color: white;
+}
+
+.btns {
+  margin-top: 2%;
+  width: 360px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color:white;
+}
+
+button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border:none;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Different colors for different buttons */
+.hint-btn {
+  background-color: #b1c9ef; /* Easy button color */
+color:white;
+border-radius: 5px;
+}
+
+.check-sol-btn {
+  background-color: #8aaee0; /* Medium button color */
+color:white;
+border-radius: 5px;
+}
+
+.solve-btn {
+  background-color: #628ecb; /* Hard button color */
+  color:white;
+  border-radius: 5px;
+}
+
+.custom-sudoku-btn {
+  background-color: #395886; /* Custom button same as header */
+  color: white;
+  border: none;
+}
+
+/* Hover effects for each button */
+.hint-btn:hover, .check-sol-btn:hover, .solve-btn:hover, .custom-sudoku-btn:hover {
+  background-color: darken(#395886, 10%);
+  color: white;
+  border: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+label:hover {
+  border: 3px solid #395886;
+}
+
+label:has(input[type="radio"]:checked) {
+  border: 3px solid #395886;
+  /* color: black; */
+}
+
+.custom-sudoku-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #395886;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-sudoku-btn:hover {
+  background-color: #395886;
+  color: white;
+}
+.editable-cell{
+  background-color: #b1c9ef;
+}
